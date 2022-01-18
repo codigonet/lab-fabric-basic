@@ -19,7 +19,7 @@ exports.install = async function (req, res) {
 	logger.debug('Bump Type : ' + ccparams.bumpType);
 	logger.debug('TransientMap isSet : ' + !!ccparams.transientMap);
 
-	ccparams.smartContractConfig = ccparams.smartContractConfig || 'config/smartcontracts.json';
+	ccparams.smartContractConfig = 'config/smartcontracts.json';
 
 	const message = await model.install(ccparams);
 	res.send(message);

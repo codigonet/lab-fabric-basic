@@ -85,24 +85,24 @@ curl -s -X POST \
   -H "cache-control: no-cache" \
   -H "content-type: application/json" \
   -d '{
-	"orgs":["MainOrg"],
+	"org":"MainOrg",
 	"channel":"main-channel",
 	"chaincode":"test_node"
 }'
 
-echo
-echo
-sleep 1
+# echo
+# echo
+# sleep 1
 
-curl -s -X POST \
-  http://localhost:3000/smartcontract/install \
-  -H "cache-control: no-cache" \
-  -H "content-type: application/json" \
-  -d '{
-	"orgs":["MainOrg", "Org1", "Org2"],
-	"channel":"allorgs-channel",
-	"chaincode":"test_golang"
-}'
+# curl -s -X POST \
+#   http://localhost:3000/smartcontract/install \
+#   -H "cache-control: no-cache" \
+#   -H "content-type: application/json" \
+#   -d '{
+# 	"orgs":["MainOrg", "Org1", "Org2"],
+# 	"channel":"allorgs-channel",
+# 	"chaincode":"test_golang"
+# }'
 
 echo
 echo
@@ -120,21 +120,18 @@ curl -s -X POST \
 	"args":[]
 }'
 
-echo
-echo
-sleep 5
+# echo
+# echo
+# sleep 5
 
-curl -s -X POST \
-  http://localhost:3000/smartcontract/query \
-  -H "cache-control: no-cache" \
-  -H "content-type: application/json" \
-  -d '{
-	"org":"MainOrg",
-	"channel":"allorgs-channel",
-	"chaincode":"test_golang",
-	"function":"ping",
-	"args":[]
-}'
-
-# Restart Hyperledger Explorer now
-docker-compose up -d
+# curl -s -X POST \
+#   http://localhost:3000/smartcontract/query \
+#   -H "cache-control: no-cache" \
+#   -H "content-type: application/json" \
+#   -d '{
+# 	"org":"MainOrg",
+# 	"channel":"allorgs-channel",
+# 	"chaincode":"test_golang",
+# 	"function":"ping",
+# 	"args":[]
+# }'

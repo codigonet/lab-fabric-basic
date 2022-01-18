@@ -7,12 +7,6 @@
 			"instantiatefuncname": "",
 			"endorsement": "default",
 			"type": "node"
-		},
-		"test_golang": {
-			"name": "another_test",
-			"path": "malarcon.cl/test_golang",
-			"instantiatefuncname": "init",
-			"endorsement": "default"
 		}
 	},
 	"endorsements": {
